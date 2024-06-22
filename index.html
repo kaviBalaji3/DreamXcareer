@@ -1,0 +1,470 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/common.scss">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+<body>
+<!-- <?php
+    include 'header.php';
+    include 'home.php';
+    include 'footer.php';
+?> -->
+
+<link rel="stylesheet" href="./assets/css/home.css">
+<script src="./assets/js/home.js"></script>
+
+
+<link rel="stylesheet" href="./assets/css/header.css">
+<script src="./assets/js/header.js"></script> 
+<header class="header" id="header">
+   <nav class="navbar container">
+      <a href="#" class="brand">DreamxCarrer</a>
+      <div class="burger" id="burger">
+         <span class="burger-line"></span>
+         <span class="burger-line"></span>
+         <span class="burger-line"></span>
+      </div>
+      <div class="menu" id="menu">
+         <ul class="menu-inner">
+            <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Conselling Form</a></li>
+            <li class="menu-item"><a href="#aboutUs" class="menu-link">About us</a></li>
+            <li class="menu-item"><a href="#joinUs" class="menu-link">Join US</a></li>
+         </ul>
+      </div>
+
+      <p href="#" id="signIn" class="menu-block">Sign-in</p>
+   </nav>
+</header>
+
+<div class="modal-bg modal-bg-signin" style="display: none;">
+    <div id="modal">
+        <span><b>SIGN IN</b></span>
+        <form>
+            <input id="username" name="username" type="textbox" placeholder="Username" required>
+            <input id="password" name="password" type="password" placeholder="Password" required>
+            <a id="forgot-link" href="#">Forgot password?</a>
+            <div class="registrationSubmit">
+                <button name="submit" id="submit" type="submit" class="signIN">Sign in</button>
+                <button name="submit" id="signUp">Create Account</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal-bg modal-bg-signup" style="display: none;">
+    <div id="modal">
+        <span><b>SIGN UP</b></span>
+        <form>
+            <input id="username" name="username" type="textbox" placeholder="Username" required>
+            <input id="email" name="email" type="email" placeholder="Email address" required>
+            <input id="password" name="password" type="password" placeholder="Password" required>
+            <!-- <a id="forgot-link" href="#">Forgot password?</a> -->
+            <div  class="registrationSubmit">
+            <button name="submit" id="submit" type="submit">Register</button>
+            <button name="submit" id="signIn" class="signIN">Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popup-overlay">
+    <div class="login-container">
+        <form id="loginForm">
+            <p>Enter the code!</p>
+            <div class="input-group">
+                <input type="text" name="username" class="otpNumber" maxlength="1">
+                <input type="text" name="username" class="otpNumber" maxlength="1">
+                <input type="text" name="username" class="otpNumber" maxlength="1">
+                <input type="text" name="username" class="otpNumber" maxlength="1">
+            </div>
+            <button type="submit" class="verifyOTP">Verify!!</button>
+        </form>
+    </div>
+</div>
+<section>
+    <!-- <div class="row"> -->
+        <div class="introduction">
+        <!-- <h2>Learn to code by watching others</h2>
+            <p>See how experienced developers solve problems in real-time.
+                Watching scripted tutorials is great,
+                but understanding how developers think is invaluable.</p> -->
+        <img xlass='studentsDreams' src="./assets/images/aim.gif" width='800'>
+        </div>
+        <div class="form-container">
+        <div class="price-info">
+            <p><span class="typed-text"></span><span class="cursor">&nbsp;</span>Together!!</p>
+        </div>
+        <form action="" method="post" novalidate class="consellingForm">
+            <div style="display: flex;">
+                <div class="input-container nameContainer">
+                    <input type="text" name="Student-name" aria-label="Student Name" placeholder="Student Name"
+                        pattern="[\p{L},\.\-'\s]*" maxlength="30" required>
+
+                    <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                            <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                            <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                        </g>
+                    </svg>
+                    <p class="message"></p>
+
+                </div>
+
+                <div class="input-container classContainer">
+                    <input type="text" name="Student-class" aria-label="class" placeholder="Class"
+                        pattern="[\p{L},\.\-'\s]*" maxlength="2" required>
+
+                    <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                            <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                            <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                        </g>
+                    </svg>
+                    <p class="message"></p>
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" name="School name" aria-label="School Name" placeholder="School Name"
+                    pattern="[\p{L},\.\-'\s]*" maxlength="30" required>
+                <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                        <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                        <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                    </g>
+                </svg>
+                <p class="message"></p>
+            </div>
+            <div class="input-container">
+                <input type="text" name="parentName" aria-label="Parent / Gardian Name"
+                    placeholder="Parent / Gardian Name" pattern="[\w\.\-\+\/]+@[\w\.\-\+\/]+\.[\w\.\-\+\/]+"
+                    maxlength="100" required>
+                <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                        <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                        <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                    </g>
+                </svg>
+                <p class="message"></p>
+            </div>
+
+            <div class="input-container">
+                <input type="text" name="parentOccupatio" aria-label="Parent / Gardian Occupation"
+                    placeholder="Parent / Gardian Occupation" pattern="[\w\.\-\+\/]+@[\w\.\-\+\/]+\.[\w\.\-\+\/]+"
+                    maxlength="100" required>
+                <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                        <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                        <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                    </g>
+                </svg>
+                <p class="message"></p>
+            </div>
+
+            <div class="input-container mobileVerificationSection">
+                <div style="display: flex; height: 92%;">
+                    <input id="text" type="text" name="maobileno" aria-label="Mobile no" placeholder="Mobile Number"
+                        pattern="(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*\d)(?=.*\W).{8,40}" maxlength="10" required>
+                    <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                            <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                            <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                        </g>
+                    </svg>
+                    <button type="button" class="numberVButton">OTP</button>
+                </div>
+                <p id="password-message" class="message"></p>
+            </div>
+
+            <div style="display: flex;">
+                <div class="input-container">
+                    <input type="text" name="zipcode" aria-label="zipcode" placeholder="Zipcode"
+                        pattern="[\p{L},\.\-'\s]*" maxlength="8" required>
+
+                    <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                            <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                            <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                        </g>
+                    </svg>
+                    <p class="message"></p>
+
+                </div>
+
+                <div class="input-container" style="margin-left: 3%;">
+                    <input type="text" name="City" aria-label="City" placeholder="City" pattern="[\p{L},\.\-'\s]*"
+                        maxlength="20" required>
+
+                    <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                            <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                            <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                        </g>
+                    </svg>
+                    <p class="message"></p>
+                </div>
+
+
+            </div>
+            <div class="input-container" style="display: flex;">
+                <div class="radiobtn">
+                    <input type="radio" id="Online" name="drone" value="Online" checked />
+                    <label for="Online">Online</label>
+                </div>
+
+                <div class="radiobtn">
+                    <input type="radio" id="Offline" name="drone" value="Offline" />
+                    <label for="Offline">Offline</label>
+                </div>
+
+                <div class="radiobtn">
+                    <input type="date" id="date" name="drone" value="" placeholder="concelling date" />
+                </div>
+            </div>
+
+            <button class="formSunmitButton" type="submit">Register</button>
+        </form>
+        </div>
+<!-- </div> -->
+</section>
+
+<div class="imageSection">
+    <h2 class="sectionTitle">What we are offering</h2>
+    <div class="container">
+        <div class="imageCrad aim">
+            <img src="./assets/images/learn.jpg">
+            <h3 class="imageTitle mt-3">Transform Passion into Purpose</h3>
+            <div class="overlay" style="width: 90%">
+                <!-- <h1 class="text-h1">the mountains</h1> -->
+                <p class="text-p">
+                    At DreamXCareer, we believe that discovering your passion is the first step towards a fulfilling
+                    career. Our "Transform Passion into Purpose" concept is designed to guide you through
+                    self-exploration and discovery. Through personalized counseling sessions and insightful assessments,
+                    we help you uncover your interests, strengths, and values.
+
+
+                    By understanding what truly excites and motivates you, we provide tailored recommendations and
+                    pathways to transform your passion into a rewarding career. Let us help you unlock your potential
+                    and embark on a journey that aligns with your true calling.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="imageCrad teacher" style="margin-left: 30px;">
+            <img src="./assets/images/teacher - Copy.jpg" style="max-width: 250px;">
+            <h3 class="imageTitle mt-3">Personalized Career Support</h3>
+            <div class="overlay" style="width: 80%">
+                <!-- <h1 class="text-h1" style="margin-top:10px">the mountains</h1> -->
+                <p class="text-p">
+                    At DreamXCareer, once we've identified your passion, our mission is to provide you with personalized
+                    career support to turn your dreams into reality. Through one-on-one counseling sessions, strategic
+                    planning, and customized advice, we guide you through every step of your journey. Our expert team
+                    helps you navigate educational and career choices, overcome challenges, and seize opportunities that
+                    align with your strengths and interests.
+
+                    <!-- With DreamXCareer, you receive dedicated support tailored to your unique aspirations, ensuring you stay on track to achieve your goals and thrive in your chosen career path. -->
+                </p>
+
+            </div>
+        </div>
+
+        <div class="imageCrad success">
+            <img src="./assets/images/success.jpg">
+            <h3 class="imageTitle mt-3">Celebrating Your Journey to Success</h3>
+            <div class="overlay" style="width: 90%">
+                <!-- <h1 class="text-h1">the mountains</h1> -->
+                <p class="text-p">
+                    At DreamXCareer, we take pride in celebrating your unique journey to success. From discovering your
+                    passion to receiving personalized guidance and support, every step you take is a milestone worth
+                    celebrating. As you navigate your educational and career path with confidence, we stand by you,
+                    offering encouragement, resources, and expert advice along the way.
+
+                    Your achievements are our joy, and we are dedicated to helping you savor every moment of your
+                    success. Let's celebrate together as you turn your dreams into accomplishments with DreamXCareer.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<link rel="stylesheet" href="./assets/css/footer.css">
+<div class="ContactUs">
+    <div class="container">
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              dolorum adipisci recusandae praesentium dicta!
+            </p>
+  
+            <div class="info">
+              <div class="information">
+                <i class="fa fa-globe" aria-hidden="true"></i> &nbsp &nbsp
+  
+                <p>92 Cherry Drive Uniondale, NY 11553</p>
+              </div>
+              <div class="information">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp&nbsp
+                <p>lorem@ipsum.com</p>
+              </div>
+              <div class="information">
+                <i class="fa fa-phone" aria-hidden="true"></i>&nbsp&nbsp
+                <p>123-456-789</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>Connect with us :</p>
+              <div class="social-icons">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+  
+            <form action="index.html" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                <input type="text" name="name" class="input" />
+                <label for="">Username</label>
+                <span>Username</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" />
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input"></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+<footer>
+
+<br> <div class='ourMission DsInformations' id='aboutUs'>
+        <h2 class='footerTilte'>Our Mission</h2> <br>
+        <p class='footerDescription' >Our mission is to empower students by providing end-to-end counseling and testing services that illuminate their career paths. We aim to help students understand how to achieve their dreams, recognize potential hurdles, and explore the best options tailored to their unique needs and goals.
+        </p>
+    <div> 
+
+    <br> <div class='aboutUS DsInformations' >
+        <h2 class='footerTilte'>About Us</h2> <br>
+        <p class='footerDescription' >Welcome to <i> DreamXCareer</i>, where your dreams meet their destined careers. At <i> DreamXCareer</i>, we are passionate about guiding students to transform their aspirations into tangible career paths. Understanding the complexities of the journey from dreams to reality, we provide comprehensive support to make this transition seamless and successful.</p>
+    <div>  
+
+
+    <br> <div class='whatWeOffer DsInformations'>
+        <h2 class='footerTilte'>What We Offer</h2> 
+        <p class='footerDescription' >
+
+        <br> <b>End-to-End Counseling Sessions:</b> Our dedicated counselors work closely with students to provide personalized guidance. We delve into each student's goals, strengths, and preferences, ensuring that the advice and support we offer are uniquely tailored to their aspirations.
+
+<br><br> <b>Career Assessment Tests:</b> We offer a variety of assessments designed to identify students' interests, skills, and potential career paths. These tests form the foundation of our personalized guidance, helping us to better understand and support each student.
+
+<br><br> <b>Pathway Planning:</b> With a clear understanding of a student’s ambitions and strengths, we outline the early steps necessary to achieve their career goals. This includes advice on suitable courses, extracurricular activities, internships, and other crucial components.
+
+<br><br> <b>Identifying Hurdles:</b> We recognize that every journey includes challenges. Our team helps students identify potential obstacles and develop strategies to overcome them, ensuring they stay on track towards their goals.
+
+<br><br> <b>Customized Options:</b> Based on each student’s requirements and needs, we provide a range of tailored options. Whether it's choosing the right educational path, exploring alternative career options, or finding additional resources, we ensure students have the information and support they need to make informed decisions.
+
+        </p>
+    <div> 
+
+    <br> <div class='whyWe DsInformations'>
+        <h2 class='footerTilte'>Why Choose <i> DreamXCareer</i></h2>
+        <p class='footerDescription' >
+
+        <br> <b>Expert Guidance:</b> Our team comprises experienced educators, career counselors, and industry professionals who bring a wealth of knowledge and expertise to our services.
+        <br><br> <b>Personalized Approach<:/b> We believe in providing personalized support. Our services are designed to meet the unique needs of each student, ensuring they receive relevant and effective guidance.
+        <br><br> <b>Comprehensive Support:</b> From initial assessments to detailed pathway planning and continuous guidance, we offer end-to-end support to help students achieve their career ambitions.
+        <br><br> <b>Commitment to Excellence:</b> We are dedicated to maintaining the highest standards of service, continuously updating our methods and resources to provide the best possible support.
+
+        </p>
+    <div>
+
+
+    <br> <div class='joinUs DsInformations' id='joinUs'>
+        <h2 class='footerTilte'>Join Us</h2> <br>
+        <p class='footerDescription' >Start your journey to a successful career with <i> DreamXCareer</i>. Let us help you turn your dreams into reality with expert guidance, personalized support, and a clear roadmap to success. Together, we can navigate the path to your future.
+
+For more information or to schedule a session, please contact us at [Your Contact Information].
+        </p>
+    <div> 
+
+
+    <ul class="social-list">
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-pinterest" role="img" class="md hydrated" aria-label="logo pinterest"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+    
+</footer>
+
+</body>
+</html>
+
