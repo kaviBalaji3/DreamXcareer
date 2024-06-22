@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+
+body{
+    background: #080938;
+    font-family: "Rubik", sans-serif;
+}
+
+// input, button, p, label, form{
+//     border-radius: 2px;
+// }
+
+p{
+    margin: 0px !important;
+}
+
+button, input, optgroup, select, textarea{
+    font-size: revert !important;
+    line-height: revert !important;
+}
